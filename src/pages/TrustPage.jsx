@@ -65,7 +65,7 @@ const TrustPage = () => {
     },
     {
       icon: Eye,
-      title:"validationProcessTitle",
+      title: t("validationProcessTitle"),
       description: t("validationProcessDesc")
     }
   ]
