@@ -89,7 +89,7 @@ const TrustPage = () => {
   ]
 
   return (
-    <div className="pt-16 min-screen starfield">
+    <div className="pt-16 min-h-screen starfield">
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -261,13 +261,12 @@ const TrustPage = () => {
       </section>
 
       <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
           >
             <Star className="w-16 h-16 mx-auto text-pink-400 mb-6" />
             <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">

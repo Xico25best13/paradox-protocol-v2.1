@@ -1,3 +1,4 @@
+// DiscountCheckoutPage.jsx
 import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
@@ -11,7 +12,7 @@ const DiscountCheckoutPage = () => {
   const navigate = useNavigate()
   const location = useLocation()
   const [selectedTicket, setSelectedTicket] = useState(null)
-  const [paymentStatus, setPaymentStatus] = useState('idle') // 'idle', 'success', 'failed'
+  const [paymentStatus, setPaymentStatus] = useState('idle')
 
   const tickets = {
     'explorador': {
@@ -23,10 +24,10 @@ const DiscountCheckoutPage = () => {
       prize: '€600',
       checkoutLink: 'https://buy.stripe.com/fZucN6aF6frtgqm1V1gnK08',
       features: [
-        'Acesso ao desafio principal',
-        'Suporte da comunidade',
-        'Certificado de participação',
-        '🎁 Desconto exclusivo por resolver o enigma!'
+        t('featureAccessMainChallenge'),
+        t('featureCommunitySupport'),
+        t('featureParticipationCertificate'),
+        '🎁 ' + t('exclusiveDiscountForSolving')
       ]
     },
     'decifrador': {
@@ -38,11 +39,11 @@ const DiscountCheckoutPage = () => {
       prize: '€1,500',
       checkoutLink: 'https://buy.stripe.com/14A7sM4gIcfhgqm0QXgnK09',
       features: [
-        'Acesso ao desafio principal',
-        'Dicas exclusivas',
-        'Suporte prioritário',
-        'Certificado avançado',
-        '🎁 Desconto exclusivo por resolver o enigma!'
+        t('featureAccessMainChallenge'),
+        t('featureExclusiveHints'),
+        t('featurePrioritySupport'),
+        t('featureAdvancedCertificate'),
+        '🎁 ' + t('exclusiveDiscountForSolving')
       ]
     },
     'mestre': {
@@ -54,12 +55,12 @@ const DiscountCheckoutPage = () => {
       prize: '€5,000',
       checkoutLink: 'https://buy.stripe.com/9B64gAbJaenpca61V1gnK0a',
       features: [
-        'Acesso ao desafio principal',
-        'Dicas exclusivas',
-        'Suporte VIP',
-        'Sessões de mentoria',
-        'Certificado de mestre',
-        '🎁 Desconto exclusivo por resolver o enigma!'
+        t('featureAccessMainChallenge'),
+        t('featureExclusiveHints'),
+        t('featureVipSupport'),
+        t('featureMentoringSessions'),
+        t('featureMasterCertificate'),
+        '🎁 ' + t('exclusiveDiscountForSolving')
       ]
     },
     'kit-completo': {
@@ -68,16 +69,16 @@ const DiscountCheckoutPage = () => {
       price: '€33.99',
       originalPrice: '€39.99',
       savings: '€6.00',
-      prize: 'Acesso Total',
+      prize: t('totalAccess'),
       checkoutLink: 'https://buy.stripe.com/cNieVe5kM4MPa1Y9ntgnK0b',
       features: [
-        'Todos os desafios incluídos',
-        'Acesso vitalício',
-        'Suporte VIP',
-        'Sessões de mentoria',
-        'Certificado premium',
-        'Bónus exclusivos',
-        '🎁 Desconto exclusivo por resolver o enigma!'
+        t('featureAllChallengesIncluded'),
+        t('featureLifetimeAccess'),
+        t('featureVipSupport'),
+        t('featureMentoringSessions'),
+        t('featurePremiumCertificate'),
+        t('featureExclusiveBonuses'),
+        '🎁 ' + t('exclusiveDiscountForSolving')
       ]
     }
   }
@@ -92,18 +93,17 @@ const DiscountCheckoutPage = () => {
         isDiscount: isDiscount
       })
     } else {
-      // If no specific ticket is selected, default to 'kit-completo' with discount
       setSelectedTicket({
         ...tickets['kit-completo'],
         isDiscount: true
       })
     }
-  }, [ticketType, location.search])
+  }, [ticketType, location.search, t])
 
   const handleCheckout = () => {
     if (selectedTicket && selectedTicket.checkoutLink) {
       window.open(selectedTicket.checkoutLink, '_blank')
-      setPaymentStatus('success') // Simulate success for now
+      setPaymentStatus('success')
     } else {
       setPaymentStatus('failed')
     }
@@ -112,7 +112,7 @@ const DiscountCheckoutPage = () => {
   if (!selectedTicket) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white">
-        <p>A carregar informações do bilhete...</p>
+        <p>{t('loading')}</p>
       </div>
     )
   }
@@ -137,14 +137,13 @@ const DiscountCheckoutPage = () => {
                 <Trophy className="w-10 h-10 text-white" />
               </motion.div>
               <h1 className="text-3xl md:text-4xl font-bold gradient-text mb-2">
-                🎉 Parabéns, Génio! 🎉
+                🎉 {t('congratulationsGenius')} 🎉
               </h1>
               <p className="text-xl text-yellow-400 font-semibold">
-                Desbloqueaste um Desconto Exclusivo!
+                {t('unlockedExclusiveDiscount')}
               </p>
             </div>
 
-            {/* Mensagem de Conquista */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -153,26 +152,24 @@ const DiscountCheckoutPage = () => {
             >
               <div className="bg-gradient-to-r from-green-900/50 via-emerald-900/50 to-green-900/50 border-2 border-green-400/50 rounded-lg p-6 text-center">
                 <h3 className="text-2xl font-bold text-green-400 mb-3">
-                  ✨ Provaste o Teu Valor! ✨
+                  ✨ {t('provedYourValue')} ✨
                 </h3>
                 <p className="text-gray-300 text-base leading-relaxed mb-4">
-                  Apenas <span className="font-bold text-yellow-400">3% dos visitantes</span> conseguem resolver o enigma. 
-                  Tu és oficialmente parte da elite intelectual do Paradox Protocol!
+                  {t('only3PercentSolve')} <span className="font-bold text-yellow-300">{t('eliteIntellectual')}</span>!
                 </p>
                 <div className="flex items-center justify-center space-x-4 text-sm">
                   <div className="flex items-center">
                     <Zap className="w-4 h-4 text-yellow-400 mr-1" />
-                    <span className="text-yellow-400 font-semibold">Mente Brilhante</span>
+                    <span className="text-yellow-400 font-semibold">{t('brilliantMind')}</span>
                   </div>
                   <div className="flex items-center">
                     <Trophy className="w-4 h-4 text-orange-400 mr-1" />
-                    <span className="text-orange-400 font-semibold">Desconto Desbloqueado</span>
+                    <span className="text-orange-400 font-semibold">{t('discountUnlocked')}</span>
                   </div>
                 </div>
               </div>
             </motion.div>
 
-            {/* Urgência Temporal com Foco em "Desfaz o Enigma" */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -181,45 +178,43 @@ const DiscountCheckoutPage = () => {
             >
               <div className="bg-gradient-to-r from-orange-600/40 via-red-600/40 to-pink-600/40 border-2 border-orange-400/60 rounded-lg p-3 md:p-4 text-center shadow-lg shadow-orange-500/20">
                 <h3 className="text-base md:text-lg font-bold text-orange-300 mb-2">
-                  🧩 DESVENDASTE O ENIGMA • GANHA ATÉ €5,000 🧩
+                  🧩 {t('unriddledEnigmaWin5000')} 🧩
                 </h3>
                 <p className="text-gray-200 text-xs md:text-sm">
-                  Este desconto exclusivo expira em breve. Não percas esta oportunidade única de conquistares o teu prémio!
+                  {t('discountExpiresSoon')}
                 </p>
               </div>
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Resumo do Pedido */}
               <div>
-                <h2 className="text-2xl font-bold text-white mb-4">🏆 Resumo da Tua Conquista</h2>
+                <h2 className="text-2xl font-bold text-white mb-4">🏆 {t('achievementSummary')}</h2>
                 <div className="bg-gray-800 p-6 rounded-lg mb-6 border-2 border-green-400/30">
                   <h3 className="text-xl font-bold text-purple-400 mb-2">{selectedTicket.name}</h3>
                   <p className="text-gray-400 text-sm mb-4">{selectedTicket.description}</p>
                   
                   <div className="bg-red-900/30 border border-red-500/50 rounded p-3 mb-4">
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-300">Preço Normal:</span>
+                      <span className="text-gray-300">{t('normalPrice')}:</span>
                       <span className="text-gray-500 line-through text-lg">{selectedTicket.originalPrice}</span>
                     </div>
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-green-400 font-bold text-lg">Preço com Desconto:</span>
+                      <span className="text-green-400 font-bold text-lg">{t('discountedPrice')}:</span>
                       <span className="text-green-400 font-bold text-2xl">{selectedTicket.price}</span>
                     </div>
                     <div className="text-center">
                       <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                        Poupas {selectedTicket.savings}! 💰
+                        {t('save')} {selectedTicket.savings}! 💰
                       </span>
                     </div>
                   </div>
 
                   <div className="mb-4">
-                    <span className="text-yellow-400 font-semibold text-lg">🎯 Prémio Potencial: €5,000</span>
+                    <span className="text-yellow-400 font-semibold text-lg">🎯 {t('potentialPrize')}: €5,000</span>
                   </div>
 
-                  {/* Features */}
                   <div className="space-y-2">
-                    <h4 className="text-white font-semibold mb-2">✅ O que está incluído:</h4>
+                    <h4 className="text-white font-semibold mb-2">✅ {t('whatsIncluded')}:</h4>
                     {selectedTicket.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-sm text-gray-300">
                         <div className="w-2 h-2 bg-green-400 rounded-full mr-3 flex-shrink-0"></div>
@@ -230,9 +225,8 @@ const DiscountCheckoutPage = () => {
                 </div>
               </div>
 
-              {/* Seleção de Bilhete */}
               <div>
-                <h2 className="text-2xl font-bold text-white mb-4">🎯 Escolhe o Teu Nível de Elite</h2>
+                <h2 className="text-2xl font-bold text-white mb-4">🎯 {t('chooseYourEliteLevel')}</h2>
                 <div className="space-y-4 mb-6">
                   {Object.keys(tickets).map((key) => {
                     const ticket = tickets[key]
@@ -251,8 +245,8 @@ const DiscountCheckoutPage = () => {
                           <h3 className="font-bold text-lg text-white">{ticket.name}</h3>
                           <div className="flex flex-col items-end">
                             {key === 'kit-completo' && (
-                              <span className="bg-yellow-500 text-black text-xs px-2 py-1 rounded font-bold mb-1">
-                                MELHOR VALOR
+                              <span className="bg-yellow-500 text-black text-xs px-2 py-1 rounded font-bold">
+                                {t('bestValue')}
                               </span>
                             )}
                             <span className="bg-green-500 text-white text-xs px-2 py-1 rounded font-bold">
@@ -266,16 +260,15 @@ const DiscountCheckoutPage = () => {
                             <span className="text-gray-500 line-through text-sm mr-2">{ticket.originalPrice}</span>
                             <span className="text-green-400 font-bold text-lg">{ticket.price}</span>
                           </div>
-                          <span className="text-yellow-400 text-sm">Prémio: {ticket.prize}</span>
+                          <span className="text-yellow-400 text-sm">{t('prize')}: {ticket.prize}</span>
                         </div>
                       </div>
                     )
                   })}
                 </div>
 
-                {/* Métodos de Pagamento com Ícones Profissionais e Redirecionamento Direto */}
                 <div className="mb-6">
-                  <h3 className="text-white font-semibold mb-4 text-center">💳 Métodos de Pagamento Seguros:</h3>
+                  <h3 className="text-white font-semibold mb-4 text-center">💳 {t('securePaymentMethods')}:</h3>
                   <div className="grid grid-cols-2 gap-3 mb-4">
                     <div 
                       onClick={handleCheckout}
@@ -311,23 +304,22 @@ const DiscountCheckoutPage = () => {
                     className="flex items-center justify-center bg-purple-600/20 backdrop-blur-sm px-3 py-2 rounded-lg border border-purple-500/30 cursor-pointer hover:bg-purple-600/30 transition-all"
                   >
                     <img src="/stripe_icon.png" alt="Stripe" className="w-5 h-5 mr-2 object-contain" />
-                    <span className="text-white font-medium text-xs">Processado por Stripe - Segurança Máxima</span>
+                    <span className="text-white font-medium text-xs">{t('processedByStripe')}</span>
                   </div>
                   <p className="text-gray-400 text-xs text-center mt-2">
-                    🔒 Todos os pagamentos são processados de forma segura com encriptação SSL
+                    🔒 {t('sslEncryption')}
                   </p>
                 </div>
 
-                {/* Testemunho de Elite */}
                 <div className="bg-purple-900/20 border border-purple-500/50 rounded-lg p-4 mb-6">
-                  <h4 className="text-purple-400 font-bold mb-2">👑 Testemunho de um Mestre:</h4>
+                  <h4 className="text-purple-400 font-bold mb-2">👑 {t('masterTestimonial')}:</h4>
                   <p className="text-gray-300 text-sm italic">
-                    "Resolver o enigma foi apenas o início. O verdadeiro desafio transformou a minha mente!" - Ana R., Mestre Certificada
+                    {t('masterTestimonialQuote')}
                   </p>
                 </div>
 
                 <p className="text-gray-400 text-xs md:text-sm mb-4 md:mb-6 text-center">
-                  🔒 Pagamento 100% seguro através do Stripe. Os teus dados estão protegidos.
+                  🔒 {t('stripe100Secure')}
                 </p>
 
                 <Button
@@ -335,15 +327,14 @@ const DiscountCheckoutPage = () => {
                   className="w-full text-base md:text-lg font-bold relative overflow-hidden group bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 hover:from-green-600 hover:via-emerald-600 hover:to-teal-600 text-white border-0 px-6 md:px-8 py-3 md:py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <span className="relative z-10 flex items-center justify-center">
-                    🧩 CONQUISTAR PRÉMIO • GANHAR €5,000
+                    🧩 {t('conquerPrizeWin5000')}
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-green-400/20 group-hover:from-yellow-400/30 group-hover:to-green-400/30 transition-all duration-300 animate-pulse"></div>
                 </Button>
                 
-                {/* Mensagem de Conquista Final */}
                 <div className="mt-3 md:mt-4 text-center">
                   <p className="text-green-400 text-xs md:text-sm font-semibold">
-                    🎉 Parabéns! Desvendaste o enigma. Agora conquista o teu prémio de €5,000!
+                    🎉 {t('congratulationsUnriddle')}
                   </p>
                 </div>
               </div>
@@ -359,13 +350,13 @@ const DiscountCheckoutPage = () => {
             className="text-center"
           >
             <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-            <h2 className="text-2xl font-bold text-white mb-2">🎉 Pagamento Iniciado com Sucesso!</h2>
-            <p className="text-gray-400 mb-4">Será redirecionado para o Stripe para finalizar a compra com o teu desconto exclusivo.</p>
+            <h2 className="text-2xl font-bold text-white mb-2">🎉 {t('paymentInitiatedSuccess')}</h2>
+            <p className="text-gray-400 mb-4">{t('redirectStripeDiscount')}</p>
             <Button
               onClick={() => navigate('/')}
               className="cta-button px-6 py-3"
             >
-              Voltar à Página Inicial
+              {t('backToHome')}
             </Button>
           </motion.div>
         )}
@@ -378,13 +369,13 @@ const DiscountCheckoutPage = () => {
             className="text-center"
           >
             <XCircle className="w-16 h-16 text-red-500 mx-auto mb-4" />
-            <h2 className="text-2xl font-bold text-white mb-2">❌ Erro no Pagamento</h2>
-            <p className="text-gray-400 mb-4">Ocorreu um erro ao iniciar o pagamento. Por favor, tenta novamente para não perderes o teu desconto exclusivo!</p>
+            <h2 className="text-2xl font-bold text-white mb-2">❌ {t('paymentError')}</h2>
+            <p className="text-gray-400 mb-4">{t('paymentErrorMessage')}</p>
             <Button
               onClick={() => setPaymentStatus('idle')}
               className="cta-button px-6 py-3"
             >
-              Tentar Novamente
+              {t('tryAgain')}
             </Button>
           </motion.div>
         )}
@@ -395,7 +386,7 @@ const DiscountCheckoutPage = () => {
             variant="outline"
             className="border-gray-700 text-gray-400 hover:bg-gray-800"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" /> Voltar à Página Inicial
+            <ArrowLeft className="w-4 h-4 mr-2" /> {t('backToHome')}
           </Button>
         </div>
       </motion.div>
@@ -404,5 +395,4 @@ const DiscountCheckoutPage = () => {
 }
 
 export default DiscountCheckoutPage
-
 

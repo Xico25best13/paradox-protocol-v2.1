@@ -1,3 +1,4 @@
+// HomePage.jsx
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import {
@@ -6,12 +7,6 @@ import {
   Star,
   Zap,
   Clock,
-  Shield,
-  Target,
-  Award,
-  CheckCircle,
-  XCircle,
-  AlertTriangle,
   X,
   Search,
   Crown
@@ -34,12 +29,11 @@ const HomePage = () => {
     seconds: 21
   })
   const [enigmaAnswer, setEnigmaAnswer] = useState('')
-  const [enigmaState, setEnigmaState] = useState('idle') // 'idle', 'success', 'error'
+  const [enigmaState, setEnigmaState] = useState('idle')
   const [attempts, setAttempts] = useState(0)
   const [showFeedback, setShowFeedback] = useState(false)
   const [zoomedImage, setZoomedImage] = useState(null)
 
-  // Countdown timer
   useEffect(() => {
     const interval = setInterval(() => {
       setTimeLeft(prev => {
@@ -67,7 +61,7 @@ const HomePage = () => {
     if (enigmaAnswer.toLowerCase().trim() === 'key') {
       setEnigmaState('success')
       setTimeout(() => {
-        navigate('/discount-checkout/kit-completo?discount=true') // Redirect to discount checkout page
+        navigate('/discount-checkout/kit-completo?discount=true')
       }, 2000)
     } else {
       setEnigmaState('error')
@@ -174,10 +168,8 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen starfield">
-      {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          {/* Logo centralizado */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -204,7 +196,7 @@ const HomePage = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold gradient-text mb-6">
-              Paradox Protocol - O Desafio das Mentes Brilhantes
+              {t("heroTitle")}
             </h1>
             <h2 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-6">
               ✨ {t('heroSubtitle')} ✨
@@ -214,7 +206,6 @@ const HomePage = () => {
             </p>
           </motion.div>
 
-          {/* Stats - Otimizado para mobile */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -236,10 +227,9 @@ const HomePage = () => {
               <div className="text-2xl md:text-3xl font-bold text-white mb-1 md:mb-2">98%</div>
               <div className="text-gray-400 text-sm md:text-base">{t("satisfactionRate")}</div>
             </div>
-            <p className="text-yellow-400 font-semibold mt-4 text-sm md:text-base col-span-full">Milhares já aceitaram o desafio. Estás pronto para ser o próximo?</p>
+            <p className="text-yellow-400 font-semibold mt-4 text-sm md:text-base col-span-full">{t('thousandsAcceptedChallenge')}</p>
           </motion.div>
 
-          {/* CTA Buttons - Melhor layout mobile */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -268,7 +258,6 @@ const HomePage = () => {
             </Button>
           </motion.div>
 
-          {/* Mensagem Persuasiva em Caixas Animadas */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -277,13 +266,11 @@ const HomePage = () => {
             className="mt-12 mb-8 md:mb-16 px-4"
           >
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 md:mb-8 text-center">
-              Não Apenas um Site. Uma Oportunidade. O Teu Próximo Nível.
+              {t('persuasiveMessageTitle')}
             </h3>
             
-            {/* Grid de Caixas Persuasivas */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-6xl mx-auto">
               
-              {/* Caixa 1: Exploração */}
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -295,15 +282,13 @@ const HomePage = () => {
                   <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300">
                     <Search className="w-5 h-5 text-white" />
                   </div>
-                  <h4 className="text-lg md:text-xl font-bold text-purple-300">Exploração</h4>
+                  <h4 className="text-lg md:text-xl font-bold text-purple-300">{t('exploration')}</h4>
                 </div>
                 <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                  Estás a navegar, a explorar... mas e se houvesse mais? Muito mais. Este não é um mero scroll. 
-                  É um convite para desvendar um desafio que pode mudar o jogo para ti.
+                  {t('explorationMessage')}
                 </p>
               </motion.div>
 
-              {/* Caixa 2: Urgência */}
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -315,15 +300,13 @@ const HomePage = () => {
                   <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300">
                     <Clock className="w-5 h-5 text-white" />
                   </div>
-                  <h4 className="text-lg md:text-xl font-bold text-orange-300">O Tempo Corre</h4>
+                  <h4 className="text-lg md:text-xl font-bold text-orange-300">{t('timeRunningOut')}</h4>
                 </div>
                 <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                  Cada segundo que passas a pensar, é um segundo que te afasta da descoberta. 
-                  Os outros já estão a avançar. Vais ficar para trás?
+                  {t('timeRunningOutMessage')}
                 </p>
               </motion.div>
 
-              {/* Caixa 3: Exclusividade */}
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -335,15 +318,13 @@ const HomePage = () => {
                   <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300">
                     <Crown className="w-5 h-5 text-white" />
                   </div>
-                  <h4 className="text-lg md:text-xl font-bold text-emerald-300">Exclusividade</h4>
+                  <h4 className="text-lg md:text-xl font-bold text-emerald-300">{t('exclusivity')}</h4>
                 </div>
                 <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                  Poucos terão a visão para ir além. Tu podes ser um deles. E a recompensa? 
-                  Não é apenas conhecimento. É algo tangível, valioso, que te espera no final.
+                  {t('exclusivityMessage')}
                 </p>
               </motion.div>
 
-              {/* Caixa 4: Ação */}
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -355,16 +336,14 @@ const HomePage = () => {
                   <div className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300">
                     <Zap className="w-5 h-5 text-white" />
                   </div>
-                  <h4 className="text-lg md:text-xl font-bold text-yellow-300">Ação Agora</h4>
+                  <h4 className="text-lg md:text-xl font-bold text-yellow-300">{t('actionNow')}</h4>
                 </div>
                 <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                  A curiosidade é boa, mas a ação é que transforma. Clica, explora, decifra. 
-                  O teu futuro no Paradox Protocol começa com um simples passo. Estás pronto?
+                  {t('actionNowMessage')}
                 </p>
               </motion.div>
             </div>
 
-            {/* Call to Action Final */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -372,17 +351,17 @@ const HomePage = () => {
               viewport={{ once: true }}
               className="mt-8 md:mt-12 bg-gradient-to-r from-red-600/30 via-pink-600/30 to-red-600/30 border-2 border-red-400/50 rounded-lg p-4 md:p-6 max-w-4xl mx-auto text-center"
             >
-              <h4 className="text-xl md:text-2xl font-bold text-red-300 mb-3">
-                ⚡ Não Percas Esta Oportunidade Única
-              </h4>
+              <h3 className="text-xl md:text-2xl font-bold text-red-300 mb-3">
+                ⚡ {t('dontMissOpportunity')}
+              </h3>
               <p className="text-gray-200 text-sm md:text-base mb-4 leading-relaxed">
-                Oportunidades como esta são raras. Garante o teu lugar entre os que ousam vencer.
+                {t('opportunitiesRare')}
               </p>
               <Button 
                 className="bg-gradient-to-r from-red-500 via-pink-500 to-red-500 hover:from-red-600 hover:via-pink-600 hover:to-red-600 text-white border-0 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300"
                 onClick={() => document.getElementById('enigma-section').scrollIntoView({ behavior: 'smooth' })}
               >
-                🚀 Reclamar o Meu Lugar
+                🚀 {t('claimMySpot')}
               </Button>
             </motion.div>
           </motion.div>
@@ -390,7 +369,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Secção de Impacto e Confiança */}
       <section className="py-12 md:py-16 px-4 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -401,11 +379,11 @@ const HomePage = () => {
             className="text-center mb-8 md:mb-12"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold gradient-text mb-4 md:mb-6">
-              🏆 Transforma a Tua Mente, Conquista Prémios Reais
+              🏆 {t('transformMindWinPrizes')}
             </h2>
             <p className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-6 leading-relaxed">
-              Mais de <span className="text-yellow-400 font-bold">10.000 participantes</span> já descobriram o poder dos enigmas do Paradox Protocol. 
-              Alguns ganharam prémios que <span className="text-green-400 font-bold">mudaram as suas vidas para sempre</span>.
+              {t('over10000Participants')} <span className="text-yellow-400 font-bold">10.000 {t('participants')}</span> {t('discoveredPower')}.
+              {t('someWonPrizes')} <span className="text-green-400 font-bold">{t('changedLivesForever')}</span>.
             </p>
           </motion.div>
 
@@ -420,9 +398,9 @@ const HomePage = () => {
               <div className="bg-gradient-to-r from-green-500 to-emerald-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Trophy className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">€2.3M Distribuídos</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">€2.3M {t('distributed')}</h3>
               <p className="text-gray-300 text-sm md:text-base">
-                Em prémios reais pagos aos nossos participantes mais brilhantes
+                {t('realPrizesPaid')}
               </p>
             </motion.div>
 
@@ -436,9 +414,9 @@ const HomePage = () => {
               <div className="bg-gradient-to-r from-blue-500 to-cyan-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">87% Taxa de Sucesso</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">87% {t('successRate')}</h3>
               <p className="text-gray-300 text-sm md:text-base">
-                Dos participantes que completam os desafios conquistam prémios
+                {t('participantsCompleteWin')}
               </p>
             </motion.div>
 
@@ -452,14 +430,13 @@ const HomePage = () => {
               <div className="bg-gradient-to-r from-purple-500 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Star className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">4.9★ Avaliação</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">4.9★ {t('rating')}</h3>
               <p className="text-gray-300 text-sm md:text-base">
-                Baseada em mais de 3.000 avaliações de participantes satisfeitos
+                {t('basedOnReviews')}
               </p>
             </motion.div>
           </div>
 
-          {/* Testemunhos Rápidos */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -474,11 +451,11 @@ const HomePage = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-semibold">Miguel R.</h4>
-                  <p className="text-gray-400 text-xs">Vencedor de €5,000</p>
+                  <p className="text-gray-400 text-xs">{t('winnerOf5000')}</p>
                 </div>
               </div>
               <p className="text-gray-300 text-sm italic">
-                "Nunca pensei que resolver enigmas pudesse mudar a minha vida financeira. O prémio de €5,000 permitiu-me investir no meu negócio!"
+                {t('testimonial1')}
               </p>
             </div>
 
@@ -489,16 +466,15 @@ const HomePage = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-semibold">Ana S.</h4>
-                  <p className="text-gray-400 text-xs">Vencedora de €1,500</p>
+                  <p className="text-gray-400 text-xs">{t('winnerOf1500')}</p>
                 </div>
               </div>
               <p className="text-gray-300 text-sm italic">
-                "Os enigmas são viciantes! Ganhei €1,500 e descobri uma paixão que nem sabia que tinha. Recomendo a todos!"
+                {t('testimonial2')}
               </p>
             </div>
           </motion.div>
 
-          {/* Call to Action Persuasivo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -507,32 +483,31 @@ const HomePage = () => {
             className="text-center bg-gradient-to-r from-orange-600/30 via-red-600/30 to-pink-600/30 border-2 border-orange-400/50 rounded-lg p-6 md:p-8"
           >
             <h3 className="text-2xl md:text-3xl font-bold text-orange-300 mb-4">
-              🧠 Tens o Que É Preciso Para Ser o Próximo Vencedor?
+              🧠 {t('haveWhatItTakes')}
             </h3>
             <p className="text-gray-200 text-base md:text-lg mb-6 leading-relaxed">
-              Apenas <span className="text-yellow-300 font-bold">3% das pessoas</span> conseguem resolver os nossos enigmas mais desafiantes. 
-              Mas aqueles que conseguem... <span className="text-green-300 font-bold">ganham prémios que mudam vidas</span>.
+              {t('only3PercentSolve')} <span className="text-yellow-300 font-bold">3% {t('ofPeople')}</span> {t('solveChallenges')}.
+              {t('butThoseWhoDo')} <span className="text-green-300 font-bold">{t('winLifeChangingPrizes')}</span>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 hover:from-orange-600 hover:via-red-600 hover:to-pink-600 text-white border-0 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300"
                 onClick={() => document.getElementById('enigma-section').scrollIntoView({ behavior: 'smooth' })}
               >
-                🧩 Aceitar o Desafio Grátis
+                🧩 {t('acceptFreeChallenge')}
               </Button>
               <Button 
                 variant="outline"
                 className="border-2 border-orange-400 text-orange-300 hover:bg-orange-500 hover:text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-bold"
                 onClick={scrollToTickets}
               >
-                💰 Ver Prémios Disponíveis
+                💰 {t('viewAvailablePrizes')}
               </Button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Enigma Zero Section - Agora em destaque */}
       <section id="enigma-section" className="py-12 md:py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -546,10 +521,9 @@ const HomePage = () => {
               🔮 {t("enigmaZeroTitle")} 🔮
             </h2>
             <p className="text-yellow-400 font-semibold mt-4 text-base md:text-lg mb-6">
-              Resolve este enigma e desbloqueia um desconto exclusivo! Apenas para mentes brilhantes.
+              {t('solveForDiscount')}
             </p>
             
-            {/* Marketing Message */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -571,7 +545,6 @@ const HomePage = () => {
               {t("enigmaZeroSubtitle")}
             </p>
 
-            {/* Countdown - Compacto em mobile */}
             <div className="mb-8 md:mb-12">
               <p className="text-yellow-400 font-semibold mb-3 md:mb-4 text-sm md:text-base">{t("nextChallenge")}:</p>
               <div className="countdown-timer max-w-xs md:max-w-md mx-auto">
@@ -594,11 +567,10 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-              <p className="text-yellow-400 font-semibold mt-4 text-sm md:text-base">O tempo para desvendar os segredos está a esgotar-se. Não deixes que esta oportunidade única te escape.</p>
+              <p className="text-yellow-400 font-semibold mt-4 text-sm md:text-base">{t('timeRunningOutMessage2')}</p>
             </div>
           </motion.div>
 
-          {/* Challenge Explanation - Mais compacto em mobile */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -657,7 +629,6 @@ const HomePage = () => {
             </div>
           </motion.div>
 
-          {/* Full Symbol Guide */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -693,13 +664,12 @@ const HomePage = () => {
               <img 
                 src="/parchment_page_4.png" 
                 alt="Parchment Page 4" 
-                className="w-full rounded-lg shadow-lg cursor:pointer"
+                className="w-full rounded-lg shadow-lg cursor-pointer"
                 onClick={() => setZoomedImage("/parchment_page_4.png")}
               />
             </div>
           </motion.div>
 
-          {/* Solution Hints */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -726,7 +696,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Tickets Section - Após o enigma como alternativa */}
       <section id="tickets-section" className="py-12 md:py-20 px-4 bg-gradient-to-r from-gray-900/50 via-purple-900/30 to-gray-900/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -737,18 +706,18 @@ const HomePage = () => {
             className="text-center mb-8 md:mb-16"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold gradient-text mb-4 md:mb-6">
-              🎫 Não Conseguiste Resolver? Não Há Problema!
+              🎫 {t('noProblemTitle')}
             </h2>
             <p className="text-base md:text-lg text-gray-300 max-w-4xl mx-auto px-2 mb-6">
-              Mesmo os génios precisam de ajuda às vezes. Escolhe o teu bilhete e acede aos enigmas com dicas e soluções.
+              {t('noProblemDescription')}
             </p>
             <div className="bg-gradient-to-r from-blue-600/30 via-purple-600/30 to-pink-600/30 border-2 border-blue-400/50 rounded-lg p-4 md:p-6 max-w-4xl mx-auto">
               <h3 className="text-xl md:text-2xl font-bold text-blue-300 mb-3">
-                💡 Cada Bilhete É Uma Oportunidade de Ganhar Até €5,000
+                💡 {t('ticketOpportunity')}
               </h3>
               <p className="text-gray-200 text-sm md:text-base">
-                Não é apenas sobre resolver enigmas. É sobre <span className="text-yellow-300 font-bold">transformar a tua mente</span>, 
-                desenvolver competências únicas e <span className="text-green-300 font-bold">conquistar prémios reais</span> que podem mudar a tua vida.
+                {t('notJustAboutSolving')} <span className="text-yellow-300 font-bold">{t('transformYourMind')}</span>, 
+                {t('developUniqueSkills')} <span className="text-green-300 font-bold">{t('conquerRealPrizes')}</span>.
               </p>
             </div>
           </motion.div>
@@ -778,7 +747,7 @@ const HomePage = () => {
                       
                       <div className="mb-3 md:mb-4">
                         {ticket.originalPrice && (
-                                <div className="text-gray-500 line-through text-xs md:text-sm">{t("was")}: {ticket.originalPrice}</div>
+                          <div className="text-gray-500 line-through text-xs md:text-sm">{t("was")}: {ticket.originalPrice}</div>
                         )}
                         <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-1 md:mb-2">{ticket.price}</div>
                         <div className="text-yellow-400 font-semibold text-sm md:text-base">
@@ -805,7 +774,7 @@ const HomePage = () => {
                       className={`w-full ${ticket.buttonClass} py-3`}
                       onClick={() => navigate(`/checkout/${ticket.slug}`)}
                     >
-                      🧩 Conquistar {ticket.name}
+                      🧩 {t('conquer')} {ticket.name}
                     </Button>
                   </CardContent>
                 </Card>
@@ -815,7 +784,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Zoomed Image Modal */}
       {zoomedImage && (
         <div 
           className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
@@ -833,20 +801,12 @@ const HomePage = () => {
         </div>
       )}
 
-      {/* Footer */}
       <footer className="py-8 px-4 text-center text-gray-400 text-sm">
-        <p>&copy; {new Date().getFullYear()} Paradox Protocol. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Paradox Protocol. {t('allRightsReserved')}</p>
       </footer>
     </div>
   )
 }
 
 export default HomePage
-
-
-
-
-
-
-
 

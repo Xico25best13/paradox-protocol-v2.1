@@ -75,7 +75,7 @@ const CheckoutPage = () => {
       setSelectedTicket(tickets[ticketType])
     } else {
       setSelectedTicket(tickets['kit-completo'])
-    }
+    } 
   }, [ticketType, t])
 
   const handleCheckout = () => {
@@ -286,5 +286,4 @@ const CheckoutPage = () => {
 }
 
 export default CheckoutPage
-
 
