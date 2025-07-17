@@ -194,7 +194,46 @@ const translations = {
     excellenceValue: 'Excelência',
     excellenceValueDesc: 'Procuramos sempre o mais alto padrão de qualidade',
     innovationValue: 'Inovação',
-    innovationValueDesc: 'Pioneiros em novas formas de desafiar a mente humana'
+    innovationValueDesc: 'Pioneiros em novas formas de desafiar a mente humana',
+
+    // Checkout Page
+    loading: 'A carregar...',
+    checkoutTitle: 'Finalizar Compra',
+    unriddleEnigmaWinUpTo: 'Decifra o Enigma e Ganha até',
+    checkoutPersuasiveMessage1: 'Cada bilhete é uma oportunidade de desvendar os mistérios do universo e habilitar-te a um prémio que desafia a lógica. Junta-te à elite e sê parte da revolução.',
+    checkoutPersuasiveMessage2: 'A tua inteligência é a chave',
+    checkoutPersuasiveMessage3: 'Não percas esta oportunidade única de te juntares às mentes mais brilhantes!',
+    mentalChallenge: 'Desafio Mental',
+    realPrizes: 'Prémios Reais',
+    orderSummary: 'Resumo da Encomenda',
+    originalPrice: 'Preço Original',
+    finalPrice: 'Preço Final',
+    potentialPrize: 'Prémio Potencial',
+    whatsIncluded: 'O que está incluído',
+    chooseYourTicket: 'Escolhe o teu Bilhete',
+    securePaymentMethods: 'Métodos de Pagamento Seguros',
+    processedByStripe: 'Processado por Stripe',
+    sslEncryption: 'Encriptação SSL',
+    whatParticipantsSay: 'O que os Participantes Dizem',
+    participantTestimonial1: '"O Paradox Protocol não é apenas um jogo, é uma experiência que te força a pensar de formas que nunca imaginaste. Os prémios são reais, mas o verdadeiro ganho é o desenvolvimento da tua mente." - Um Participante Satisfeito',
+    stripeRedirectMessage: 'Ao clicar em "Decifrar o Enigma", serás redirecionado para uma página de pagamento segura da Stripe para concluir a tua compra.',
+    unriddleEnigmaWin5000: 'Decifrar o Enigma e Ganhar €5,000',
+    joinWinnersMessage: 'Junta-te aos vencedores e desvenda o teu potencial!',
+    backToHome: 'Voltar ao Início',
+
+    // Trust Page (additional keys)
+    trustHeroTitle: 'Confiança e Transparência no Paradox Protocol',
+    trustHeroSubtitle: 'Acreditamos que a verdadeira inteligência merece ser recompensada com total clareza e justiça. Descobre os nossos princípios fundamentais.',
+    philosophyTitle: 'A Nossa Filosofia: Mérito Acima do Acaso',
+    philosophyText: 'No Paradox Protocol, a sorte não tem lugar. Cada enigma é uma construção lógica e determinística, onde a solução é alcançada através de raciocínio puro e dedicação. Acreditamos que o sucesso deve ser uma consequência direta da tua capacidade intelectual, e não do acaso. Os nossos desafios são desenhados para testar os limites da mente humana, garantindo que cada vitória é um testemunho do teu próprio mérito.',
+    transparencyTitle: 'Transparência Total: Nada a Esconder',
+    transparencyText: 'Acreditamos na transparência como pilar fundamental da confiança. Todos os nossos processos, desde a criação dos enigmas até à distribuição dos prémios, são abertos e auditáveis. Não há "caixas negras" ou algoritmos secretos. A informação é clara, e o caminho para a solução é sempre lógico, mesmo que desafiador. A tua confiança é a nossa prioridade, e é por isso que nos esforçamos para ser completamente abertos em todas as etapas.',
+    certificationsSecurity: 'Certificações e Segurança: A Tua Proteção é a Nossa Prioridade',
+    successTitle: 'Histórias de Sucesso: Onde a Inteligência é Recompensada',
+    successText: 'As histórias dos nossos participantes são a prova viva de que o mérito é recompensado. Desde estudantes a profissionais experientes, mentes brilhantes de todo o mundo têm desvendado os nossos enigmas e alcançado prémios significativos. Cada história de sucesso é um testemunho da eficácia do nosso protocolo e da capacidade inata da mente humana. Junta-te a esta comunidade de vencedores e escreve a tua própria história de sucesso.',
+    ctaTitle: 'Pronto para Desafiar a Tua Mente?',
+    ctaText: 'O Protocolo Paradox espera por ti. Desvenda os segredos, prova o teu valor e habilita-te a prémios que mudam a vida. A tua jornada começa agora.',
+    startChallenge: 'Começar o Desafio'
   },
   
   en: {
@@ -390,7 +429,46 @@ const translations = {
     excellenceValue: 'Excellence',
     excellenceValueDesc: 'We always strive for the highest standard of quality',
     innovationValue: 'Innovation',
-    innovationValueDesc: 'Pioneers in new ways to challenge the human mind'
+    innovationValueDesc: 'Pioneers in new ways to challenge the human mind',
+
+    // Checkout Page
+    loading: 'Loading...',
+    checkoutTitle: 'Checkout',
+    unriddleEnigmaWinUpTo: 'Unriddle the Enigma and Win up to',
+    checkoutPersuasiveMessage1: 'Each ticket is an opportunity to unravel the mysteries of the universe and qualify for a prize that defies logic. Join the elite and be part of the revolution.',
+    checkoutPersuasiveMessage2: 'Your intelligence is the key',
+    checkoutPersuasiveMessage3: 'Don\'t miss this unique opportunity to join the brightest minds!',
+    mentalChallenge: 'Mental Challenge',
+    realPrizes: 'Real Prizes',
+    orderSummary: 'Order Summary',
+    originalPrice: 'Original Price',
+    finalPrice: 'Final Price',
+    potentialPrize: 'Potential Prize',
+    whatsIncluded: 'What\'s Included',
+    chooseYourTicket: 'Choose Your Ticket',
+    securePaymentMethods: 'Secure Payment Methods',
+    processedByStripe: 'Processed by Stripe',
+    sslEncryption: 'SSL Encryption',
+    whatParticipantsSay: 'What Participants Say',
+    participantTestimonial1: '"Paradox Protocol is not just a game, it\'s an experience that forces you to think in ways you never imagined. The prizes are real, but the true gain is the development of your mind." - A Satisfied Participant',
+    stripeRedirectMessage: 'By clicking "Unriddle the Enigma", you will be redirected to a secure Stripe payment page to complete your purchase.',
+    unriddleEnigmaWin5000: 'Unriddle the Enigma and Win €5,000',
+    joinWinnersMessage: 'Join the winners and unlock your potential!',
+    backToHome: 'Back to Home',
+
+    // Trust Page (additional keys)
+    trustHeroTitle: 'Trust and Transparency in Paradox Protocol',
+    trustHeroSubtitle: 'We believe true intelligence deserves to be rewarded with complete clarity and fairness. Discover our fundamental principles.',
+    philosophyTitle: 'Our Philosophy: Merit Above Chance',
+    philosophyText: 'In Paradox Protocol, luck has no place. Each enigma is a logical and deterministic construct, where the solution is achieved through pure reasoning and dedication. We believe that success should be a direct consequence of your intellectual capacity, not chance. Our challenges are designed to test the limits of the human mind, ensuring that every victory is a testament to your own merit.',
+    transparencyTitle: 'Total Transparency: Nothing to Hide',
+    transparencyText: 'We believe in transparency as a fundamental pillar of trust. All our processes, from the creation of enigmas to the distribution of prizes, are open and auditable. There are no "black boxes" or secret algorithms. Information is clear, and the path to the solution is always logical, even if challenging. Your trust is our priority, and that\'s why we strive to be completely open at every stage.',
+    certificationsSecurity: 'Certifications and Security: Your Protection is Our Priority',
+    successTitle: 'Success Stories: Where Intelligence is Rewarded',
+    successText: 'The stories of our participants are living proof that merit is rewarded. From students to experienced professionals, brilliant minds from all over the world have unraveled our enigmas and achieved significant prizes. Each success story is a testament to the effectiveness of our protocol and the innate capacity of the human mind. Join this community of winners and write your own success story.',
+    ctaTitle: 'Ready to Challenge Your Mind?',
+    ctaText: 'The Paradox Protocol awaits you. Unravel the secrets, prove your worth, and qualify for life-changing prizes. Your journey begins now.',
+    startChallenge: 'Start the Challenge'
   },
   
   es: {
@@ -499,7 +577,7 @@ const translations = {
     enigmaZeroTitle: 'Enigma Cero: La Puerta de Entrada',
     enigmaZeroSubtitle: 'Demuestra tu valía resolviendo este pequeño enigma. Es más simple de lo que parece, ¡solo necesitas descubrir qué palabra está escrita en los símbolos de abajo!',
     enigmaMarketingTitle: '¡Desvela el Enigma, Desbloquea el Futuro!',
-    enigmaMarketingDesc: 'Tu intelecto es la clave para desentrañar los secretos del Protocolo Paradox. Resuelve este enigma ancestral, obtén acceso exclusivo y califica para un premio que desafía la lógica. ¡Tu boleto a la élite comienza aquí!',
+    enigmaMarketingDesc: 'Tu intelecto es la clave para desentrañar los secretos del Protocolo Paradox. Resuelve este enigma ancestral, obtén acceso exclusivo y califica para un premio que desafía la lógica. Tu boleto a la élite comienza aquí!',
     challengeTitle: 'Tu Desafío',
     challengeQuestion: '¿Qué palabra está escrita en estos tres símbolos?',
     challengeExplanation: 'Observa cuidadosamente los tres símbolos en la imagen de abajo. Cada uno representa una letra del alfabeto moderno. ¡Usa los pergaminos como guía para descubrir qué letras son y forma la palabra secreta!',
@@ -518,7 +596,7 @@ const translations = {
     parchment2Title: 'Pergamino II: G-L',
     parchment2Desc: 'Continuación del alfabeto perdido',
     parchment3Title: 'Pergamino III: M-R',
-    parchment3Desc: 'Símbolos del medio del alfabeto',
+    parch3Desc: 'Símbolos del medio del alfabeto',
     parchment4Title: 'Pergamino IV: S-Z',
     parchment4Desc: 'Últimas letras de la secuencia completa',
     
@@ -586,7 +664,46 @@ const translations = {
     excellenceValue: 'Excelencia',
     excellenceValueDesc: 'Siempre buscamos el más alto estándar de calidad',
     innovationValue: 'Innovación',
-    innovationValueDesc: 'Pioneros en nuevas formas de desafiar la mente humana'
+    innovationValueDesc: 'Pioneros en nuevas formas de desafiar la mente humana',
+
+    // Checkout Page
+    loading: 'Cargando...',
+    checkoutTitle: 'Finalizar Compra',
+    unriddleEnigmaWinUpTo: 'Descifra el Enigma y Gana hasta',
+    checkoutPersuasiveMessage1: 'Cada boleto es una oportunidad para desentrañar los misterios del universo y calificar para un premio que desafía la lógica. Únete a la élite y sé parte de la revolución.',
+    checkoutPersuasiveMessage2: 'Tu inteligencia es la clave',
+    checkoutPersuasiveMessage3: '¡No te pierdas esta oportunidad única de unirte a las mentes más brillantes!',
+    mentalChallenge: 'Desafío Mental',
+    realPrizes: 'Premios Reales',
+    orderSummary: 'Resumen del Pedido',
+    originalPrice: 'Precio Original',
+    finalPrice: 'Precio Final',
+    potentialPrize: 'Premio Potencial',
+    whatsIncluded: 'Qué Incluye',
+    chooseYourTicket: 'Elige tu Boleto',
+    securePaymentMethods: 'Métodos de Pago Seguros',
+    processedByStripe: 'Procesado por Stripe',
+    sslEncryption: 'Cifrado SSL',
+    whatParticipantsSay: 'Lo que Dicen los Participantes',
+    participantTestimonial1: '"Paradox Protocol no es solo un juego, es una experiencia que te obliga a pensar de formas que nunca imaginaste. Los premios son reales, pero la verdadera ganancia es el desarrollo de tu mente." - Un Participante Satisfecho',
+    stripeRedirectMessage: 'Al hacer clic en "Descifrar el Enigma", serás redirigido a una página de pago segura de Stripe para completar tu compra.',
+    unriddleEnigmaWin5000: 'Descifra el Enigma y Gana €5,000',
+    joinWinnersMessage: '¡Únete a los ganadores y desbloquea tu potencial!',
+    backToHome: 'Volver al Inicio',
+
+    // Trust Page (additional keys)
+    trustHeroTitle: 'Confianza y Transparencia en Paradox Protocol',
+    trustHeroSubtitle: 'Creemos que la verdadera inteligencia merece ser recompensada con total claridad y equidad. Descubre nuestros principios fundamentales.',
+    philosophyTitle: 'Nuestra Filosofía: Mérito por Encima del Azar',
+    philosophyText: 'En Paradox Protocol, la suerte no tiene cabida. Cada enigma es una construcción lógica y determinística, donde la solución se logra a través del razonamiento puro y la dedicación. Creemos que el éxito debe ser una consecuencia directa de tu capacidad intelectual, y no del azar. Nuestros desafíos están diseñados para poner a prueba los límites de la mente humana, asegurando que cada victoria sea un testimonio de tu propio mérito.',
+    transparencyTitle: 'Transparencia Total: Nada que Ocultar',
+    transparencyText: 'Creemos en la transparencia como pilar fundamental de la confianza. Todos nuestros procesos, desde la creación de los enigmas hasta la distribución de los premios, son abiertos y auditables. No hay "cajas negras" ni algoritmos secretos. La información es clara, y el camino hacia la solución es siempre lógico, aunque desafiante. Tu confianza es nuestra prioridad, y por eso nos esforzamos por ser completamente abiertos en todas las etapas.',
+    certificationsSecurity: 'Certificaciones y Seguridad: Tu Protección es Nuestra Prioridad',
+    successTitle: 'Historias de Éxito: Donde la Inteligencia es Recompensada',
+    successText: 'Las historias de nuestros participantes son la prueba viviente de que el mérito es recompensado. Desde estudiantes hasta profesionales experimentados, mentes brillantes de todo el mundo han desentrañado nuestros enigmas y han logrado premios significativos. Cada historia de éxito es un testimonio de la eficacia de nuestro protocolo y de la capacidad innata de la mente humana. Únete a esta comunidad de ganadores y escribe tu propia historia de éxito.',
+    ctaTitle: '¿Listo para Desafiar tu Mente?',
+    ctaText: 'El Protocolo Paradox te espera. Desentraña los secretos, demuestra tu valía y califica para premios que cambian la vida. Tu viaje comienza ahora.',
+    startChallenge: 'Comenzar el Desafío'
   },
   
   de: {
@@ -704,10 +821,10 @@ const translations = {
     ancientSymbols: 'Vollständiger Symbolführer',
     ancientSymbolsDesc: 'Diese alten Pergamente enthalten das vollständige Alphabet der Symbole. Nutzen Sie diese Informationen, um das obige Rätsel zu entschlüsseln...', 
     solutionHints: 'Lösungshinweise',
-    solutionHintsDesc: 'Nachdem Sie das vollständige Alphabet gesehen haben, sind hier die spezifischen Buchstaben, die Sie zur Lösung des Rätsels benötigen:',
+    solutionHintsDesc: 'Nachdem Sie das vollständige Alphabet gesehen haben, hier sind die spezifischen Buchstaben, die Sie zur Lösung des Rätsels benötigen:',
     yourAnswer: 'Ihre Antwort',
     enterAnswerHint: 'Schreiben Sie das Wort, das Sie in den Symbolen oben entdeckt haben',
-    needHelp: 'Brauchen Sie Hilfe?',
+    needHelp: 'Brauchen Sie Sie Hilfe?',
     scrollForClues: 'Scrollen Sie nach unten, um die vollständigen Hinweise zu sehen',
     parchment1Title: 'Pergament I: A-F',
     parchment1Desc: 'Erste Buchstaben des Ahnenalphabets',
@@ -782,7 +899,46 @@ const translations = {
     excellenceValue: 'Exzellenz',
     excellenceValueDesc: 'Wir streben immer nach dem höchsten Qualitätsstandard',
     innovationValue: 'Innovation',
-    innovationValueDesc: 'Pioniere in neuen Wegen, den menschlichen Geist herauszufordern'
+    innovationValueDesc: 'Pioniere in neuen Wegen, den menschlichen Geist herauszufordern',
+
+    // Checkout Page
+    loading: 'Wird geladen...',
+    checkoutTitle: 'Kasse',
+    unriddleEnigmaWinUpTo: 'Entschlüsseln Sie das Rätsel und gewinnen Sie bis zu',
+    checkoutPersuasiveMessage1: 'Jedes Ticket ist eine Gelegenheit, die Geheimnisse des Universums zu lüften und sich für einen Preis zu qualifizieren, der die Logik herausfordert. Treten Sie der Elite bei und werden Sie Teil der Revolution.',
+    checkoutPersuasiveMessage2: 'Ihre Intelligenz ist der Schlüssel',
+    checkoutPersuasiveMessage3: 'Verpassen Sie nicht diese einzigartige Gelegenheit, sich den brillantesten Köpfen anzuschließen!',
+    mentalChallenge: 'Mentale Herausforderung',
+    realPrizes: 'Echte Preise',
+    orderSummary: 'Bestellübersicht',
+    originalPrice: 'Originalpreis',
+    finalPrice: 'Endpreis',
+    potentialPrize: 'Potenzieller Preis',
+    whatsIncluded: 'Was ist enthalten',
+    chooseYourTicket: 'Wählen Sie Ihr Ticket',
+    securePaymentMethods: 'Sichere Zahlungsmethoden',
+    processedByStripe: 'Verarbeitet von Stripe',
+    sslEncryption: 'SSL-Verschlüsselung',
+    whatParticipantsSay: 'Was Teilnehmer sagen',
+    participantTestimonial1: '"Paradox Protocol ist nicht nur ein Spiel, es ist eine Erfahrung, die Sie dazu zwingt, auf Weisen zu denken, die Sie sich nie vorgestellt haben. Die Preise sind real, aber der wahre Gewinn ist die Entwicklung Ihres Geistes." - Ein zufriedener Teilnehmer',
+    stripeRedirectMessage: 'Durch Klicken auf "Rätsel entschlüsseln" werden Sie zu einer sicheren Stripe-Zahlungsseite weitergeleitet, um Ihren Kauf abzuschließen.',
+    unriddleEnigmaWin5000: 'Rätsel entschlüsseln und 5.000 € gewinnen',
+    joinWinnersMessage: 'Schließen Sie sich den Gewinnern an und entfalten Sie Ihr Potenzial!',
+    backToHome: 'Zurück zur Startseite',
+
+    // Trust Page (additional keys)
+    trustHeroTitle: 'Vertrauen und Transparenz im Paradox Protocol',
+    trustHeroSubtitle: 'Wir glauben, dass wahre Intelligenz mit vollständiger Klarheit und Fairness belohnt werden sollte. Entdecken Sie unsere Grundprinzipien.',
+    philosophyTitle: 'Unsere Philosophie: Verdienst über Zufall',
+    philosophyText: 'Im Paradox Protocol hat Glück keinen Platz. Jedes Rätsel ist eine logische und deterministische Konstruktion, bei der die Lösung durch reines Denken und Hingabe erreicht wird. Wir glauben, dass Erfolg eine direkte Folge Ihrer intellektuellen Kapazität sein sollte und nicht des Zufalls. Unsere Herausforderungen sind darauf ausgelegt, die Grenzen des menschlichen Geistes zu testen und sicherzustellen, dass jeder Sieg ein Beweis für Ihr eigenes Verdienst ist.',
+    transparencyTitle: 'Volle Transparenz: Nichts zu Verbergen',
+    transparencyText: 'Wir glauben an Transparenz als grundlegende Säule des Vertrauens. Alle unsere Prozesse, von der Erstellung der Rätsel bis zur Verteilung der Preise, sind offen und überprüfbar. Es gibt keine "Black Boxes" oder geheimen Algorithmen. Informationen sind klar, und der Weg zur Lösung ist immer logisch, auch wenn er herausfordernd ist. Ihr Vertrauen ist unsere Priorität, und deshalb bemühen wir uns, in allen Phasen vollständig offen zu sein.',
+    certificationsSecurity: 'Zertifizierungen und Sicherheit: Ihr Schutz ist unsere Priorität',
+    successTitle: 'Erfolgsgeschichten: Wo Intelligenz belohnt wird',
+    successText: 'Die Geschichten unserer Teilnehmer sind der lebende Beweis dafür, dass Verdienst belohnt wird. Von Studenten bis zu erfahrenen Fachleuten haben brillante Köpfe aus der ganzen Welt unsere Rätsel gelöst und bedeutende Preise erzielt. Jede Erfolgsgeschichte ist ein Beweis für die Wirksamkeit unseres Protokolls und die angeborene Fähigkeit des menschlichen Geistes. Treten Sie dieser Gemeinschaft von Gewinnern bei und schreiben Sie Ihre eigene Erfolgsgeschichte.',
+    ctaTitle: 'Bereit, Ihren Geist herauszufordern?',
+    ctaText: 'Das Paradox Protocol erwartet Sie. Entdecken Sie die Geheimnisse, beweisen Sie Ihren Wert und qualifizieren Sie sich für lebensverändernde Preise. Ihre Reise beginnt jetzt.',
+    startChallenge: 'Herausforderung starten'
   },
   
   fr: {
@@ -978,7 +1134,46 @@ const translations = {
     excellenceValue: 'Excellence',
     excellenceValueDesc: 'Nous visons toujours le plus haut standard de qualité',
     innovationValue: 'Innovation',
-    innovationValueDesc: 'Pionniers dans de nouvelles façons de défier l\'esprit humain'
+    innovationValueDesc: 'Pionniers dans de nouvelles façons de défier l\'esprit humain',
+
+    // Checkout Page
+    loading: 'Chargement...',
+    checkoutTitle: 'Paiement',
+    unriddleEnigmaWinUpTo: 'Déchiffrez l\'Énigme et Gagnez jusqu\'à',
+    checkoutPersuasiveMessage1: 'Chaque billet est une opportunité de percer les mystères de l\'univers et de vous qualifier pour un prix qui défie la logique. Rejoignez l\'élite et faites partie de la révolution.',
+    checkoutPersuasiveMessage2: 'Votre intelligence est la clé',
+    checkoutPersuasiveMessage3: 'Ne manquez pas cette opportunité unique de rejoindre les esprits les plus brillants !',
+    mentalChallenge: 'Défi Mental',
+    realPrizes: 'Prix Réels',
+    orderSummary: 'Récapitulatif de la Commande',
+    originalPrice: 'Prix Original',
+    finalPrice: 'Prix Final',
+    potentialPrize: 'Prix Potentiel',
+    whatsIncluded: 'Ce qui est Inclus',
+    chooseYourTicket: 'Choisissez Votre Billet',
+    securePaymentMethods: 'Méthodes de Paiement Sécurisées',
+    processedByStripe: 'Traité par Stripe',
+    sslEncryption: 'Cryptage SSL',
+    whatParticipantsSay: 'Ce que Disent les Participants',
+    participantTestimonial1: '"Paradox Protocol n\'est pas seulement un jeu, c\'est une expérience qui vous force à penser de manières que vous n\'auriez jamais imaginées. Les prix sont réels, mais le vrai gain est le développement de votre esprit." - Un Participant Satisfait',
+    stripeRedirectMessage: 'En cliquant sur "Déchiffrer l\'Énigme", vous serez redirigé vers une page de paiement sécurisée de Stripe pour finaliser votre achat.',
+    unriddleEnigmaWin5000: 'Déchiffrer l\'Énigme et Gagner 5 000 €',
+    joinWinnersMessage: 'Rejoignez les gagnants et libérez votre potentiel !',
+    backToHome: 'Retour à l\'Accueil',
+
+    // Trust Page (additional keys)
+    trustHeroTitle: 'Confiance et Transparence dans le Protocole Paradoxe',
+    trustHeroSubtitle: 'Nous croyons que la véritable intelligence mérite d\'être récompensée avec une clarté et une équité totales. Découvrez nos principes fondamentaux.',
+    philosophyTitle: 'Notre Philosophie : Le Mérite au-delà du Hasard',
+    philosophyText: 'Dans le Protocole Paradoxe, la chance n\'a pas sa place. Chaque énigme est une construction logique et déterministe, où la solution est atteinte par un raisonnement pur et un dévouement. Nous croyons que le succès doit être une conséquence directe de votre capacité intellectuelle, et non du hasard. Nos défis sont conçus pour tester les limites de l\'esprit humain, garantissant que chaque victoire est un témoignage de votre propre mérite.',
+    transparencyTitle: 'Transparence Totale : Rien à Cacher',
+    transparencyText: 'Nous croyons en la transparence comme pilier fondamental de la confiance. Tous nos processus, de la création des énigmes à la distribution des prix, sont ouverts et auditables. Il n\'y a pas de "boîtes noires" ou d\'algorithmes secrets. L\'information est claire, et le chemin vers la solution est toujours logique, même s\'il est difficile. Votre confiance est notre priorité, et c\'est pourquoi nous nous efforçons d\'être complètement ouverts à chaque étape.',
+    certificationsSecurity: 'Certifications et Sécurité : Votre Protection est Notre Priorité',
+    successTitle: 'Histoires de Succès : Là où l\'Intelligence est Récompensée',
+    successText: 'Les histoires de nos participants sont la preuve vivante que le mérite est récompensé. Des étudiants aux professionnels expérimentés, des esprits brillants du monde entier ont percé nos énigmes et remporté des prix significatifs. Chaque histoire de succès est un témoignage de l\'efficacité de notre protocole et de la capacité innée de l\'esprit humain. Rejoignez cette communauté de gagnants et écrivez votre propre histoire de succès.',
+    ctaTitle: 'Prêt à Défier Votre Esprit ?',
+    ctaText: 'Le Protocole Paradoxe vous attend. Percez les secrets, prouvez votre valeur et qualifiez-vous pour des prix qui changent la vie. Votre voyage commence maintenant.',
+    startChallenge: 'Commencer le Défi'
   }
 }
 
@@ -1011,4 +1206,6 @@ export const useLanguage = () => {
   }
   return context
 }
+
+
 
