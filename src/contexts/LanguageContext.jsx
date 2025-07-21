@@ -9,7 +9,7 @@ const translations = {
     terms: 'Termos',
     
     // Hero Section
-    heroTitle: 'O Protocolo que Desafia as Mentes Mais Brilhantes',
+    heroTitle: 'Paradox Protocol - O Desafio das Mentes Mais Brilhantes',
     heroSubtitle: 'CONSEGUES OUVIR O ECO DO ORÁCULO?',
     heroDescription: 'Uma experiência única para intelectos excepcionais. Bem-vindo ao futuro dos enigmas.',
     
@@ -272,12 +272,7 @@ const translations = {
     testimonial1: '"Nunca pensei que um enigma online pudesse ser tão gratificante. O Paradox Protocol mudou a minha vida!"',
     winnerOf1500: 'Vencedora de €1.500',
     testimonial2: '"Os desafios são incríveis e o suporte é fantástico. Recomendo a todos que queiram testar os seus limites."',
-    haveWhatItTakes: 'Tens o que é preciso?',
-    only3PercentSolve: 'Apenas alguns conseguem resolver os nossos desafios, mas aqueles que o fazem ganham prémios que mudam vidas.',
-    ofPeople: 'das pessoas',
-    solveChallenges: 'conseguem resolver os nossos desafios',
-    butThoseWhoDo: 'mas aqueles que o fazem',
-    winLifeChangingPrizes: 'ganham prémios que mudam vidas.',
+     only3PercentSolve: 'Apenas alguns conseguem resolver os nossos desafios, mas aqueles que o fazem ganham prémios que mudam vidas.',
     acceptFreeChallenge: 'Aceitar Desafio Gratuito',
     viewAvailablePrizes: 'Ver Prémios Disponíveis',
     solveForDiscount: 'Resolve para Desconto',
@@ -350,7 +345,7 @@ const translations = {
     terms: 'Terms',
     
     // Hero Section
-    heroTitle: 'The Protocol that Challenges the Brightest Minds',
+    heroTitle: 'Paradox Protocol - The Challenge of the Brightest Minds',
     heroSubtitle: 'CAN YOU HEAR THE ORACLE\'S ECHO?',
     heroDescription: 'A unique experience for exceptional intellects. Welcome to the future of enigmas.',
     
@@ -691,7 +686,7 @@ const translations = {
     terms: 'Términos',
     
     // Hero Section
-    heroTitle: 'El Protocolo que Desafía las Mentes Más Brillantes',
+    heroTitle: 'Paradox Protocol - O Desafio das Mentes Mais Brilhantes',
     heroSubtitle: '¿PUEDES OÍR EL ECO DEL ORÁCULO?',
     heroDescription: 'Una experiencia única para intelectos excepcionales. Bienvenido al futuro de los enigmas.',
     
@@ -1031,7 +1026,7 @@ const translations = {
     terms: 'Bedingungen',
     
     // Hero Section
-    heroTitle: 'Das Protokoll, das die Brillantesten Köpfe Herausfordert',
+    heroTitle: 'Paradox Protocol - Das Protokoll, das die Brillantesten Köpfe Herausfordert',
     heroSubtitle: 'KANNST DU DAS ECHO DES ORAKELS HÖREN?',
     heroDescription: 'Eine einzigartige Erfahrung für außergewöhnliche Intellekte. Willkommen in der Zukunft der Rätsel.',
     
@@ -1372,7 +1367,7 @@ const translations = {
     terms: 'Conditions',
     
     // Hero Section
-    heroTitle: 'Le Protocole qui Défie les Esprits les Plus Brillants',
+    heroTitle: 'Paradox Protocol - Le Protocole qui Défie les Esprits les Plus Brillants',
     heroSubtitle: 'ENTENDEZ-VOUS L\'ÉCHO DE L\'ORACLE?',
     heroDescription: 'Une expérience unique pour les intellects exceptionnels. Bienvenue dans le futur des énigmes.',
     
