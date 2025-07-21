@@ -19,10 +19,10 @@ const Navbar = () => {
   ]
 
   const navItems = [
-    { name: t('home'), path: '/' },
-    { name: t('about'), path: '/sobre' },
-    { name: t('trust'), path: '/confianca' },
-    { name: t('terms'), path: '/termos' }
+    { name: t(\'home\'), path: \'/' },
+    { name: t(\'about\'), path: \'/sobre\' },
+    { name: t(\'trust\'), path: \'/confianca\' },
+    { name: t(\'terms\'), path: \'/termos\' }
   ]
 
   const isActive = (path) => location.pathname === path
