@@ -136,11 +136,12 @@ const HomePage = () => {
       prize: t('totalAccess'),
       description: t('completeKitDesc'),
       features: [
-        t('completeKitFeature1'),
-        t('completeKitFeature2'),
-        t('completeKitFeature3'),
-        t('completeKitFeature4'),
-        t('completeKitFeature5')
+        t("featureAllChallengesIncluded"),
+        t("featureLifetimeAccess"),
+        t("featureVipSupport"),
+        t("featureMentoringSession"),
+        t("completeKitFeature6"),
+        t("completeKitFeature7")
       ],
       buttonClass: "cta-button",
       popular: false,

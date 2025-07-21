@@ -63,6 +63,10 @@ const translations = {
     completeKitFeature5: 'Máximas Hipóteses de Ganhar',
     completeKitFeature6: 'Mentoria Exclusiva',
     completeKitFeature7: 'Recursos ilimitados',
+    featureAllChallengesIncluded: 'Todos os Desafios Incluídos',
+    featureLifetimeAccess: 'Acesso Vitalício',
+    featureVipSupport: 'Suporte VIP',
+    featureMentoringSession: 'Sessão de Mentoria',
     
     // Badges
     mostPopular: 'MAIS POPULAR',
@@ -404,6 +408,10 @@ const translations = {
     completeKitFeature5: 'Maximum Winning Chances',
     completeKitFeature6: 'Exclusive Mentorship',
     completeKitFeature7: 'Unlimited Resources',
+    featureAllChallengesIncluded: 'All Challenges Included',
+    featureLifetimeAccess: 'Lifetime Access',
+    featureVipSupport: 'VIP Support',
+    featureMentoringSession: 'Mentoring Session',
     
     // Badges
     mostPopular: 'MOST POPULAR',
@@ -745,6 +753,10 @@ const translations = {
     completeKitFeature5: 'Máximas Posibilidades de Ganar',
     completeKitFeature6: 'Mentoría Exclusiva',
     completeKitFeature7: 'Recursos ilimitados',
+    featureAllChallengesIncluded: 'Todos los Desafíos Incluidos',
+    featureLifetimeAccess: 'Acceso Vitalicio',
+    featureVipSupport: 'Soporte VIP',
+    featureMentoringSession: 'Sesión de Mentoría',
     
     // Badges
     mostPopular: 'MÁS POPULAR',
@@ -1085,6 +1097,10 @@ const translations = {
     completeKitFeature5: 'Maximale Gewinnchancen',
     completeKitFeature6: 'Exklusives Mentoring',
     completeKitFeature7: 'Unbegrenzte Ressourcen',
+    featureAllChallengesIncluded: 'Alle Herausforderungen Inklusive',
+    featureLifetimeAccess: 'Lebenslanger Zugang',
+    featureVipSupport: 'VIP-Support',
+    featureMentoringSession: 'Mentoring-Sitzung',
     
     // Badges
     mostPopular: 'AM BELIEBTESTEN',
@@ -1426,6 +1442,10 @@ const translations = {
     completeKitFeature5: 'Chances Maximales de Gagner',
     completeKitFeature6: 'Mentorat Exclusif',
     completeKitFeature7: 'Ressources Illimitées',
+    featureAllChallengesIncluded: 'Tous les Défis Inclus',
+    featureLifetimeAccess: 'Accès à Vie',
+    featureVipSupport: 'Support VIP',
+    featureMentoringSession: 'Session de Mentorat',
     
     // Badges
     mostPopular: 'PLUS POPULAIRE',
