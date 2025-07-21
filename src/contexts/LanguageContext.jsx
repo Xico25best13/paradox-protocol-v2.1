@@ -62,7 +62,7 @@ const translations = {
     completeKitFeature4: 'Rede de Elite',
     completeKitFeature5: 'Máximas Hipóteses de Ganhar',
     completeKitFeature6: 'Mentoria Exclusiva',
-    completeKitFeature7: 'Recursos Ilimitados',
+    completeKitFeature7: 'Recursos ilimitados',
     
     // Badges
     mostPopular: 'MAIS POPULAR',
@@ -350,7 +350,7 @@ const translations = {
     // Hero Section
     heroTitle: 'The Protocol that Challenges the Brightest Minds',
     heroSubtitle: 'CAN YOU HEAR THE ORACLE\'S ECHO?',
-    heroDescription: 'A unique experience for exceptional intellects. Welcome to the future of puzzles.',
+    heroDescription: 'A unique experience for exceptional intellects. Welcome to the future of enigmas.',
     
     // Stats
     totalPrize: 'Total Prize',
@@ -469,7 +469,7 @@ const translations = {
     parchment4Title: 'Parchment IV: S-Z',
     parchment4Desc: 'Final letters of the complete sequence',
     
-    // Time and countdownown
+    // Time and countdown
     nextChallenge: 'Next Challenge',
     days: 'days',
     hours: 'hours',
@@ -485,7 +485,7 @@ const translations = {
     
     // Trust Page
     trustTitle: 'Trust Factor: Merit, Not Luck, in Paradox Protocol',
-    trustSubtitle: 'In Paradox Protocol, trust is built on transparency, logic, and the complete absence of randomness. We believe success should be a direct consequence of your intelligence and dedication, not chance.',
+    trustSubtitle: 'At Paradox Protocol, trust is built on transparency, logic, and the complete absence of randomness. We believe success should be a direct consequence of your intelligence and dedication, not chance.',
     trustMetricsTitle: 'Trust Metrics',
     trustPrinciplesTitle: 'Fundamental Principles',
     trustCertificationsTitle: 'Certifications and Security',
@@ -730,19 +730,19 @@ const translations = {
     decoderFeature5: 'Webinars Exclusivos',
     
     masterFeature1: 'Todo del Decodificador',
-    masterFeature2: 'Enigmas Bonus',
+    masterFeature2: 'Enigmas de bonificación',
     masterFeature3: 'Acceso VIP',
     masterFeature4: 'Reconocimiento Público',
     masterFeature5: 'Sesiones 1-a-1',
-    masterFeature6: 'Acceso Anticipado',
+    masterFeature6: 'Acceso anticipado',
     
     completeKitFeature1: 'Todos los Enigmas',
-    completeKitFeature2: 'Acceso de por Vida',
-    completeKitFeature3: 'Soporte Premium',
+    completeKitFeature2: 'Acceso de por vida',
+    completeKitFeature3: 'Soporte premium',
     completeKitFeature4: 'Red de Élite',
     completeKitFeature5: 'Máximas Posibilidades de Ganar',
     completeKitFeature6: 'Mentoría Exclusiva',
-    completeKitFeature7: 'Recursos Ilimitados',
+    completeKitFeature7: 'Recursos ilimitados',
     
     // Badges
     mostPopular: 'MÁS POPULAR',
@@ -758,7 +758,7 @@ const translations = {
     // Enigma Section
     enigmaTitle: 'Descifra el Enigma Ancestral',
     enigmaSubtitle: 'Tres símbolos antiguos guardan la clave. ¿Puedes desentrañar el misterio?',
-    enigmaHint: 'Pista: Los símbolos representam letras de una palabra en inglés...',
+    enigmaHint: 'Pista: Los símbolos representan letras de una palabra en inglés...',
     enigmaPlaceholder: 'Introduce la palabra clave...',
     enterKeyword: 'Introduce la palabra clave...',
     decipherEnigma: 'Descifrar Enigma',
