@@ -48,9 +48,8 @@ const CheckoutPage = () => {
         t('featureAccessMainChallenge'),
         t('featureExclusiveHints'),
         t('featureVipSupport'),
-        t('featureMentoringSessions'),
-        t('featureMasterCertificate')
-      ]
+        t("featureMentoringSession"),
+        t("featureMasterCertificate")      ]
     },
     'kit-completo': {
       name: t('completeKit'),
@@ -63,8 +62,8 @@ const CheckoutPage = () => {
         t('featureAllChallengesIncluded'),
         t('featureLifetimeAccess'),
         t('featureVipSupport'),
-        t('featureMentoringSessions'),
-        t('featurePremiumCertificate'),
+        t("featureMentoringSession"),
+        t("featurePremiumCertificate"),
         t('featureExclusiveBonuses')
       ]
     }
