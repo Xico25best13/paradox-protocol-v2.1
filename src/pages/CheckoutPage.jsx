@@ -61,8 +61,7 @@ const CheckoutPage = () => {
       features: [
         t('featureAllChallengesIncluded'),
         t('featureLifetimeAccess'),
-        t('featureVipSupport'),
-        t("featureMentoringSession"),
+        t('featureVipSupport'),        t("featureMentoringSession"),
         t("featurePremiumCertificate"),
         t('featureExclusiveBonuses')
       ]
