@@ -24,9 +24,10 @@ const DiscountCheckoutPage = () => {
       prize: '€600',
       checkoutLink: 'https://buy.stripe.com/fZucN6aF6frtgqm1V1gnK08',
       features: [
-        t('featureAccessMainChallenge'),
-        t('featureCommunitySupport'),
-        t('featureParticipationCertificate'),
+        t("explorerFeature1"),
+        t("explorerFeature2"),
+        t("explorerFeature3"),
+        t("explorerFeature4"),
         '🎁 ' + t('exclusiveDiscountForSolving')
       ]
     },
@@ -39,10 +40,11 @@ const DiscountCheckoutPage = () => {
       prize: '€1,500',
       checkoutLink: 'https://buy.stripe.com/14A7sM4gIcfhgqm0QXgnK09',
       features: [
-        t('featureAccessMainChallenge'),
-        t('featureExclusiveHints'),
-        t('featurePrioritySupport'),
-        t('featureAdvancedCertificate'),
+        t("decoderFeature1"),
+        t("decoderFeature2"),
+        t("decoderFeature3"),
+        t("decoderFeature4"),
+        t("decoderFeature5"),
         '🎁 ' + t('exclusiveDiscountForSolving')
       ]
     },
@@ -55,11 +57,12 @@ const DiscountCheckoutPage = () => {
       prize: '€5,000',
       checkoutLink: 'https://buy.stripe.com/9B64gAbJaenpca61V1gnK0a',
       features: [
-        t('featureAccessMainChallenge'),
-        t('featureExclusiveHints'),
-        t('featureVipSupport'),
-        t('featureMentoringSessions'),
-        t('featureMasterCertificate'),
+        t("masterFeature1"),
+        t("masterFeature2"),
+        t("masterFeature3"),
+        t("masterFeature4"),
+        t("masterFeature5"),
+        t("masterFeature6"),
         '🎁 ' + t('exclusiveDiscountForSolving')
       ]
     },
