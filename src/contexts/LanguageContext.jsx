@@ -1250,8 +1250,7 @@ const translations = {
     
     // AboutPage - Neue Schlüssel
     intellectualExcellence: 'Intellektuelle Exzellenz',
-    intellectualExcellenceDesc: 'Wir schätzen Tiefgang im Denken und die Fähigkeit, komplexe Probleme zu lösen.',
-    globalCommunity: 'Comunidade Global',
+    globalCommunity: 'Globale Gemeinschaft',
     globalCommunityDesc: 'Wir verbinden brillante Köpfe aus der ganzen Welt in einem Raum der Zusammenarbeit und gegenseitigen Herausforderung.',
     constantInnovation: 'Ständige Innovation',
     constantInnovationDesc: 'Wir entwickeln unsere Herausforderungen ständig weiter, um die Grenzen des menschlichen Wissens zu testen.',
