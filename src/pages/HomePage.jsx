@@ -487,11 +487,10 @@ const HomePage = () => {
             className="text-center bg-gradient-to-r from-orange-600/30 via-red-600/30 to-pink-600/30 border-2 border-orange-400/50 rounded-lg p-6 md:p-8"
           >
             <h3 className="text-2xl md:text-3xl font-bold text-orange-300 mb-4">
-              🧠 {t('haveWhatItTakes')}
+              🧠 {t("haveWhatItTakes")}
             </h3>
             <p className="text-gray-200 text-base md:text-lg mb-6 leading-relaxed">
-              {t('only3PercentSolve')} <span className="text-yellow-300 font-bold">3% {t('ofPeople')}</span> {t('solveChallenges')}.
-              {t('butThoseWhoDo')} <span className="text-green-300 font-bold">{t('winLifeChangingPrizes')}</span>.
+              {t("only3PercentSolve")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
