@@ -1658,7 +1658,7 @@ const translations = {
     ofPeople: "",
     solveChallenges: "",
     butThoseWhoDo: "",
-    winLifeChangingPrizes: "gagnent des prix qui changent la vie.",',
+    winLifeChangingPrizes: "gagnent des prix qui changent la vie.",
     acceptFreeChallenge: 'Accepter le Défi Gratuit',
     viewAvailablePrizes: 'Voir les Prix Disponibles',
     solveForDiscount: 'Résoudre pour une Réduction',
